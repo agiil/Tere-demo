@@ -25,6 +25,12 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "libxmljs-mt": "^0.18.3",
-    "saml2-js": "^2.0.1"
+    "moment": "^2.20.1",
+    "saml2-js": "^2.0.1",
+    "valid-url": "^1.0.9",
+    "xml-crypto": "^0.10.1",
+    "xml-encryption": "^0.11.0",
+    "xml-name-validator": "^3.0.0",
+    "xmldom": "^0.1.27"
   }
 }

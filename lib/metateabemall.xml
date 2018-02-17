@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor
+    xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+    entityID=""
+    validUntil="">
+	<md:Extensions>
+		<eidas:SPType xmlns:eidas="http://eidas.europa.eu/saml-extensions">public</eidas:SPType>
+		<alg:DigestMethod
+            xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport"
+            Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <alg:DigestMethod
+            xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport"
+            Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+		<alg:SigningMethod
+            xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport"
+            Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha512-rsa-MGF1"/>
+		<alg:SigningMethod
+            xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport"
+            Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+	</md:Extensions>
+	<md:SPSSODescriptor
+        AuthnRequestsSigned="true"
+        WantAssertionsSigned="true"
+        protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:KeyDescriptor
+            use="signing">
+			<ds:KeyInfo
+                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:X509Data>
+					<ds:X509Certificate>
+                    ...
+                    </ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+        <md:KeyDescriptor
+            use="encryption">
+			<ds:KeyInfo
+                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:X509Data>
+					<ds:X509Certificate>
+                    ...
+                    </ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+		<md:AssertionConsumerService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            index="0"
+            isDefault="true"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Parmakson Research OÜ</md:OrganizationName>
+	</md:Organization>
+</md:EntityDescriptor>
