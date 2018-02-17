@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/pais.ejs %>
+</head>
+
+<body onload='alusta()'>
+
+  <% include ../partials/pealkiri.ejs %>
+  
+  <p>Where are you coming from? <i>Note that some countries have not been connected yet</i></p>
+
+  <div id='lipukesed'></div>
+
+  <p><a class='nupp' href="/auth">Log me in!</a></p>
+
+  <% include ../partials/jalus.ejs %>
+
+</body>
+</html>
