@@ -6,12 +6,16 @@ const metateave = require('./lib/metateave');
 
 const sp_options = {
   entity_id: "https://tere-demo.herokuapp.com/metadata",
-  private_key: fs.readFileSync("./votmed/key-file.pem").toString(),
-  cert: fs.readFileSync("./votmed/cert-file.crt").toString(),
+  private_key: JSON.parse(process.env.PRIVATE),
+  cert: fs.readFileSync("./serdid/cert-file.crt").toString(),
   assert_endpoint: "https://tere-demo.herokuapp.com/assert",
   signatureAlgorithm: 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256',
   digestAlgorithm: 'http://www.w3.org/2001/04/xmlenc#sha256'
 }; 
+
+// Vt http://www.beardedhacker.com/blog/2014/10/20/load-private-key-to-heroku/
+console.log('Privaatvõti:');
+console.log(sp_options.private_key);
 
 // Moodusta metateave
 var metateaveXML = metateave.moodusta(sp_options);
