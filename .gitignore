@@ -5,5 +5,11 @@ npm-debug.log
 # Abifailid
 abi
 
+# Salajane
+Salajane
+
 # Local development
 .vscode
+
+# Heroku lokaalsed keskkonnamuutujad
+.env
