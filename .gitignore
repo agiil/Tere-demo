@@ -2,11 +2,11 @@
 node_modules
 npm-debug.log
 
-# Abifailid
-abi
+# Arendusmärkmed
+arendus
 
 # Privaatvõtmed
-secret
+salajane
 
 # Local development
 .vscode

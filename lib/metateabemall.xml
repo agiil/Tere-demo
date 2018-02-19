@@ -5,18 +5,12 @@
     validUntil="">
 	<md:Extensions>
 		<eidas:SPType xmlns:eidas="http://eidas.europa.eu/saml-extensions">public</eidas:SPType>
-		<alg:DigestMethod
-            xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport"
-            Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
         <alg:DigestMethod
             xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport"
             Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
 		<alg:SigningMethod
             xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport"
-            Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha512-rsa-MGF1"/>
-		<alg:SigningMethod
-            xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport"
-            Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+            Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
 	</md:Extensions>
 	<md:SPSSODescriptor
         AuthnRequestsSigned="true"
@@ -27,9 +21,7 @@
 			<ds:KeyInfo
                 xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 				<ds:X509Data>
-					<ds:X509Certificate>
-                    ...
-                    </ds:X509Certificate>
+					<ds:X509Certificate></ds:X509Certificate>
 				</ds:X509Data>
 			</ds:KeyInfo>
 		</md:KeyDescriptor>
@@ -38,9 +30,7 @@
 			<ds:KeyInfo
                 xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 				<ds:X509Data>
-					<ds:X509Certificate>
-                    ...
-                    </ds:X509Certificate>
+					<ds:X509Certificate></ds:X509Certificate>
 				</ds:X509Data>
 			</ds:KeyInfo>
 		</md:KeyDescriptor>
